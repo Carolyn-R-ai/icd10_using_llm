@@ -29,7 +29,7 @@ def normalize(text: str) -> str:
 
 @st.cache_data
 def load_data():
-    df = pd.read_excel(r"C:\Users\Hp\Downloads\icd10_with_diagnosis.xlsx")
+    df = pd.read_excel("icd10_with_diagnosis.xlsx")
     required = ["ICD10_Code", "Diagnosis_Name", "WHO_Full_Desc", "ICD10_Block"]
     for col in required:
         if col not in df.columns:
@@ -145,4 +145,5 @@ if not df.empty:
                         f"{i}. **{row['Diagnosis_Name']}** — {row['ICD10_Code']}"
                     )
         else:
+
             st.error("Not found")
