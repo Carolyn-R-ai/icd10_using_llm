@@ -10,7 +10,7 @@ st.set_page_config(
 
 st.title("🧬 ICD-10 Matcher")
 
-genai.configure(api_key = API_KEY )
+genai.configure(api_key = "API_KEY" )
 
 STOP_WORDS = {
     "cancer", "tumor", "tumour", "malignant",
@@ -107,4 +107,5 @@ if not df.empty:
         else:
             st.error("Not Found")
 else:
+
     st.error("Dataset not loaded")
