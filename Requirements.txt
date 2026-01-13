@@ -1,4 +1,4 @@
-streamlit
-pandas
+streamlit>=1.31
+pandas>=2.0
 openpyxl
-google-generativeai
+google-generativeai==0.3.2
